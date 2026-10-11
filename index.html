@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0b12">
+    <meta name="description" content="Turn your ideas into song lyrics with Babybear Lyric AI.">
+    <title>Babybear Lyric AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><header class="header">
+    <div class="brand">
+        <div class="brand-icon">🎤</div>
+        <div>
+            <h1>BABYBEAR <span>AI</span></h1>
+            <p>YOUR NEXT HIT STARTS HERE</p>
+        </div>
+    </div>
+    <div class="status"><span></span> LYRIC STUDIO</div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <div class="hero-tag">✦ YOUR PERSONAL SONGWRITER</div>
+        <h2>Turn your feelings<br>into <span>music.</span></h2>
+        <p>Create lyrics inspired by your story, your mood, and your sound.</p>
+    </section>
+
+    <section class="generator card">
+        <div class="section-title">
+            <div>
+                <h3>🎧 Create your song</h3>
+                <p>Tell us what you're feeling.</p>
+            </div>
+            <span class="step">01 / CREATE</span>
+        </div>
+
+        <label for="genre">MUSIC GENRE</label>
+        <select id="genre">
+            <option value="Afrotrap">Afrotrap</option>
+            <option value="Afrobeats">Afrobeats</option>
+            <option value="Drill">Drill</option>
+            <option value="Trap">Trap</option>
+            <option value="R&B">R&B</option>
+            <option value="Amapiano">Amapiano</option>
+            <option value="Hip-hop">Hip-hop</option>
+            <option value="Gospel">Gospel</option>
+        </select>
+
+        <label for="mood">SONG MOOD</label>
+        <select id="mood">
+            <option value="Emotional">🥀 Emotional</option>
+            <option value="Motivational">🔥 Motivational</option>
+            <option value="Romantic">❤️ Romantic</option>
+            <option value="Sad">💔 Sad</option>
+            <option value="Confident">😈 Confident</option>
+            <option value="Chill">🌙 Chill</option>
+            <option value="Celebratory">🥂 Celebratory</option>
+        </select>
+
+        <label for="language">LYRIC LANGUAGE</label>
+        <select id="language">
+            <option value="English">English</option>
+            <option value="Chichewa">Chichewa</option>
+            <option value="English mixed with Chichewa">English + Chichewa</option>
+        </select>
+
+        <label for="structure">SONG STRUCTURE</label>
+        <select id="structure">
+            <option value="Full song">Full song</option>
+            <option value="Chorus only">Chorus only</option>
+            <option value="Verse only">Verse only</option>
+            <option value="Freestyle">Freestyle</option>
+        </select>
+
+        <label for="topic">WHAT IS YOUR SONG ABOUT?</label>
+        <textarea id="topic" maxlength="500" placeholder="Example: A young man chasing success after heartbreak, working hard to change his life..."></textarea>
+
+        <div class="char-count"><span id="charCount">0</span>/500 characters</div>
+
+        <button id="generateBtn" class="generate-btn">
+            <span>✦</span> GENERATE MY LYRICS <span>↗</span>
+        </button>
+
+        <p class="disclaimer">Your story. Your sound. Your music. 🎵</p>
+    </section>
+
+    <section id="resultSection" class="card result-section hidden">
+        <div class="section-title">
+            <div>
+                <h3>📝 Your lyrics</h3>
+                <p>Your next creation starts here.</p>
+            </div>
+            <span class="result-badge">LYRIC STUDIO</span>
+        </div>
+
+        <div id="lyricsOutput" class="lyrics-output" aria-live="polite"></div>
+
+        <div class="result-actions">
+            <button id="copyBtn" class="secondary-btn">📋 Copy lyrics</button>
+            <button id="saveBtn" class="secondary-btn">❤️ Save lyrics</button>
+        </div>
+
+        <button id="regenerateBtn" class="regenerate-btn">↻ Create another version</button>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <span>🎼</span>
+            <h4>Your genre</h4>
+            <p>Explore different sounds.</p>
+        </div>
+        <div class="feature">
+            <span>✍️</span>
+            <h4>Your words</h4>
+            <p>Turn ideas into lyrics.</p>
+        </div>
+        <div class="feature">
+            <span>🚀</span>
+            <h4>Your future</h4>
+            <p>Keep creating and improving.</p>
+        </div>
+    </section>
+
+    <section class="card saved-section">
+        <h3>❤️ Saved lyrics</h3>
+        <p>Your favourite creations will appear here.</p>
+        <div id="savedLyrics"></div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-brand">BABYBEAR <span>AI</span> 🎤</div>
+    <p>Made for the ones with a story to tell.</p>
+    <p class="copyright">© 2026 Babybear Lyric AI</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
